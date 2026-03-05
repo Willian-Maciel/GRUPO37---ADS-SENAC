@@ -17,7 +17,7 @@ Análise da evolução dos métodos de pagamento no Brasil, com foco na transiç
 ## 3. Planejamento do Projeto
 * **Tarefas:**
     - [x] Criação e estruturação do repositório no GitHub.
-    - [ ] Download e upload da base de dados (.csv).
+    - [x] Download e upload da base de dados (.csv).
     - [ ] Limpeza de dados e tratamento de séries temporais com Python.
     - [ ] Criação de Dashboard interativo (abordagem Low Code).
 * **Cronograma:** Desenvolvimento das etapas técnicas nas próximas semanas.
