@@ -1,32 +1,30 @@
 import pandas as pd
 
-# 1. Carregar os dados originais
+# 1. Carregar os dados originais (o arquivo que você subiu no GitHub)
 df = pd.read_csv('../data/pagamentos_brasil.csv')
 
-# 2. Dicionário de Tradução (Limpeza e Padronização)
-# Vamos trocar os nomes técnicos por nomes claros em português
-traducao_colunas = {
+# 2. Dicionário de Tradução
+# Vamos mudar os nomes das colunas de inglês para português
+traducao = {
     'YearMonth': 'ano_mes',
-    'quantityPix': 'qtd_pix',
     'valuePix': 'valor_pix',
-    'quantityTED': 'qtd_ted',
     'valueTED': 'valor_ted',
-    'quantityTEC': 'qtd_tec',
     'valueTEC': 'valor_tec',
-    'quantityBankCheck': 'qtd_cheque',
     'valueBankCheck': 'valor_cheque',
-    'quantityBrazilianBoletoPayment': 'qtd_boleto',
     'valueBrazilianBoletoPayment': 'valor_boleto'
 }
+df.rename(columns=traducao, inplace=True)
 
-# Aplicando a renomeação
-df.rename(columns=traducao_colunas, inplace=True)
+# 3. Criar a coluna de Valor Total (Soma de todos os métodos)
+# Aqui o Python soma linha por linha os valores de cada coluna
+colunas_valor = ['valor_pix', 'valor_ted', 'valor_tec', 'valor_cheque', 'valor_boleto']
+df['valor_total'] = df[colunas_valor].sum(axis=1)
 
-# 3. Tratamento Extra: Converter 'ano_mes' para data real
-# O formato original é 202405 (YYYYMM)
+# 4. Ajustar o formato da data (essencial para os gráficos futuros)
+# Transforma '202405' em uma data que o computador entende
 df['data'] = pd.to_datetime(df['ano_mes'].astype(str), format='%Y%m')
 
-# 4. Salvar a base limpa e traduzida
+# 5. Salvar o resultado final na pasta data
 df.to_csv('../data/base_tratada.csv', index=False)
 
-print("Limpeza e Tradução concluídas! Arquivo 'base_tratada.csv' gerado.")
+print("Sucesso! Criamos o arquivo 'base_tratada.csv' com a soma total.")
