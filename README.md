@@ -18,7 +18,7 @@ Análise da evolução dos métodos de pagamento no Brasil, com foco na transiç
 * **Tarefas:**
     - [x] Criação e estruturação do repositório no GitHub.
     - [x] Download e upload da base de dados (.csv).
-    - [ ] Limpeza de dados e tratamento de séries temporais com Python.
+    - [x] Limpeza de dados e tratamento de séries temporais com Python.
     - [ ] Criação de Dashboard interativo (abordagem Low Code).
 * **Cronograma:** Desenvolvimento das etapas técnicas nas próximas semanas.
 * **Transformações pretendidas:** Conversão de tipos de dados, normalização de datas e cálculo de market share por modalidade.
