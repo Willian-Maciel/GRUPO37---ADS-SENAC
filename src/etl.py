@@ -31,7 +31,7 @@ traducao = {
 }
 df.rename(columns=traducao, inplace=True)
 
-# 4. Criar a coluna de Valor Total (Métrica de ADS)
+# 4. Criar a coluna de Valor Total 
 colunas_valor = ['valor_pix', 'valor_ted', 'valor_tec', 'valor_cheque', 'valor_boleto']
 df['valor_total'] = df[colunas_valor].sum(axis=1)
 
