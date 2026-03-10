@@ -11,7 +11,7 @@ pasta_projeto = os.path.dirname(diretorio_atual)
 caminho_csv = os.path.join(pasta_projeto, 'data', 'base_tratada.csv')
 
 # Título Principal
-st.title("📊 Painel de Indicadores Financeiros (PIX vs Tradicionais)")
+st.title("Painel de Indicadores Financeiros (PIX vs Tradicionais)")
 
 if os.path.exists(caminho_csv):
     df = pd.read_csv(caminho_csv)
