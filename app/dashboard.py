@@ -10,7 +10,7 @@ st.set_page_config(page_title="Análise de Pagamentos - Brasil", layout="wide")
 caminho_csv = os.path.join(os.getcwd(), 'data', 'base_tratada.csv')
 
 # Título Principal
-st.title("📊 Painel de Indicadores Financeiros (PIX vs Tradicionais)")
+st.title("Painel de Indicadores Financeiros (PIX vs Tradicionais)")
 
 if os.path.exists(caminho_csv):
     df = pd.read_csv(caminho_csv)
