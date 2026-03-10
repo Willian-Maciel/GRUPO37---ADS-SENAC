@@ -36,6 +36,6 @@ if os.path.exists(caminho_csv):
     with st.expander("Clique para ver os dados brutos"):
         st.write(df)
 else:
-    # Mensagem de erro amigável com o caminho que ele tentou ler
+    # Mensagem de erro 
     st.error(f"Erro: Não encontrei o arquivo em: {caminho_csv}")
     st.info("Verifique se o arquivo 'base_tratada.csv' está na pasta 'data' do seu GitHub.")
