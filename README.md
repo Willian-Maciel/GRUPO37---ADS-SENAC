@@ -62,7 +62,6 @@ streamlit run app/dashboard.py
 * [x] Download e upload da base de dados (.csv).
 * [x] Limpeza de dados e tratamento de séries temporais com Python.
 * [x] Estruturação da pasta app e dashboard inicial.
-* [ ] Refinamento das visualizações e métricas de Market Share.
 
 ## 6. Visualizações e Métricas
 
